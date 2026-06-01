@@ -1,0 +1,105 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tansteak Restaurant</title>
+
+    <style>
+        body{
+            margin:0;
+            font-family:Arial, sans-serif;
+            background:#f5f5f5;
+            text-align:center;
+        }
+
+        header{
+            background:#8B0000;
+            color:white;
+            padding:40px 20px;
+        }
+
+        h1{
+            margin:0;
+        }
+
+        .container{
+            margin:50px auto;
+            max-width:800px;
+        }
+
+        .menu{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+            gap:20px;
+            padding:20px;
+        }
+
+        .card{
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .card a{
+            text-decoration:none;
+            color:white;
+            background:#8B0000;
+            padding:10px 20px;
+            border-radius:5px;
+            display:inline-block;
+            margin-top:10px;
+        }
+
+        footer{
+            margin-top:50px;
+            padding:20px;
+            background:#222;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Tansteak Restaurant</h1>
+    <p>Selamat Datang di Website Resmi Tansteak</p>
+</header>
+
+<div class="container">
+    <h2>Pilih Menu</h2>
+
+    <div class="menu">
+
+        <div class="card">
+            <h3>Menu Utama</h3>
+            <a href="Menu.html">Buka</a>
+        </div>
+
+        <div class="card">
+            <h3>Daftar Makanan</h3>
+            <a href="makanan.html">Buka</a>
+        </div>
+
+        <div class="card">
+            <h3>Customer Review</h3>
+            <a href="customer.html">Buka</a>
+        </div>
+
+        <div class="card">
+            <h3>Contact</h3>
+            <a href="contact.html">Buka</a>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    © 2026 Tansteak Restaurant
+</footer>
+
+</body>
+</html>
+```
