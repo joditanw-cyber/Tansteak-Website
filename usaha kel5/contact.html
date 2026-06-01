@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | TanSTEAK</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff8f0;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.header-logo {
+  height: 70px;
+}
+
+.menu-toggle {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* SIDEBAR */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background: #111;
+  transform: translateX(-100%);
+  transition: 0.3s;
+  padding-top: 60px;
+  z-index: 1000;
+}
+
+.sidebar.active {
+  transform: translateX(0);
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  padding: 15px 25px;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  background: #444;
+}
+
+/* FORM */
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #d85a00;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, select, textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+button {
+  background: #d85a00;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #bb4800;
+}
+
+/* FOOTER (sedikit dirapihin) */
+footer {
+  background-color: #9f702f;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  margin-top: 80px;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.footer-icons img {
+  width: 45px;
+  transition: 0.3s;
+}
+
+.footer-icons img:hover {
+  transform: scale(1.1);
+}
+
+footer h4 {
+  font-size: 1.6rem;
+}
+
+footer p {
+  font-size: 1.1rem;
+}
+
+.btn-light {
+  color: #9b6f39;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <img src="tansteak.png" class="header-logo">
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+</header>
+
+<!-- SIDEBAR -->
+<nav id="sidebar" class="sidebar">
+  <a href="Menu.html">Home</a>
+  <a href="customer_review_updated.html">Review</a>
+  <a href="page4 html.html">Service</a>
+  <a href="makanan.html">Menu</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<!-- FORM -->
+<div class="container">
+  <h1>Contact & Reservation</h1>
+
+  <!-- GANTI EMAIL DI SINI -->
+  <form action="https://formsubmit.co/indraandik986@gmail.com" method="POST">
+
+    <input type="text" name="Nama" placeholder="Nama Lengkap" required>
+
+    <input type="tel" name="No HP" placeholder="Nomor HP" required>
+
+    <select name="Kategori" required>
+      <option value="">Pilih Kategori</option>
+      <option value="Catering">Catering</option>
+      <option value="Reservasi Meja">Reservasi Meja</option>
+    </select>
+
+    <input type="date" name="Tanggal" required>
+
+    <input type="number" name="Jumlah Orang" placeholder="Jumlah Orang">
+
+    <textarea name="Pesan" rows="4" placeholder="Catatan tambahan..."></textarea>
+
+    <!-- biar gak spam -->
+    <input type="hidden" name="_captcha" value="false">
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <h4>Ingin pesan? Kontak kami sekarang!</h4>
+  <p>
+    Nikmati steak premium dengan cita rasa khas TanSTEAK. 
+    Hubungi kami sekarang untuk reservasi, pemesanan, 
+    atau layanan katering dan on site cooking.
+  </p>
+
+  <div class="footer-icons">
+    <a href="#">
+      <img src="ig.png">
+    </a>
+
+    <a href="https://wa.me/6282284111419" class="btn-light">
+      Kontak Sekarang
+    </a>
+
+    <a href="#">
+      <img src="tiktok.png">
+    </a>
+  </div>
+</footer>
+
+<!-- SCRIPT -->
+<script>
+function toggleMenu() {
+  document.getElementById("sidebar").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
