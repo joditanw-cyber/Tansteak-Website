@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -5,181 +6,393 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TanSTEAK Restaurant</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-    font-family:Segoe UI,sans-serif;
-    background:#f8f3ed;
+background:#f8f1e7;
+overflow-x:hidden;
 }
 
+/* NAVBAR */
+
 nav{
-    position:absolute;
-    top:0;
-    width:100%;
-    padding:25px 80px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    z-index:10;
+position:fixed;
+top:0;
+width:100%;
+padding:25px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:999;
+background:rgba(0,0,0,.25);
+backdrop-filter:blur(12px);
 }
 
 .logo{
-    color:white;
-    font-size:28px;
-    font-weight:bold;
+font-size:30px;
+font-weight:700;
+color:white;
+letter-spacing:2px;
 }
 
-.menu a{
-    color:white;
-    text-decoration:none;
-    margin-left:30px;
+nav ul{
+display:flex;
+gap:40px;
+list-style:none;
 }
+
+nav a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#e7c28b;
+}
+
+/* HERO */
 
 .hero{
-    height:100vh;
-    background:
-    linear-gradient(rgba(0,0,0,.5),
-    rgba(0,0,0,.5)),
-    url("https://images.unsplash.com/photo-1558030006-450675393462");
-    background-size:cover;
-    background-position:center;
+height:100vh;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
+background:
+linear-gradient(
+rgba(0,0,0,.55),
+rgba(0,0,0,.55)
+),
+url("https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1800&q=80");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
 }
 
-.hero-content h1{
-    color:white;
-    font-size:80px;
+.hero-content{
+max-width:900px;
 }
 
-.hero-content p{
-    color:white;
-    font-size:24px;
-    margin:15px 0 30px;
+.hero h1{
+font-size:90px;
+color:white;
+font-weight:700;
+line-height:1;
+}
+
+.hero span{
+color:#e7c28b;
+}
+
+.hero p{
+margin-top:20px;
+color:white;
+font-size:22px;
+line-height:1.8;
+}
+
+.buttons{
+margin-top:35px;
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
 }
 
 .btn{
-    padding:14px 30px;
-    text-decoration:none;
-    border-radius:30px;
-    margin:0 10px;
+padding:15px 35px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
 }
 
 .btn-primary{
-    background:#d4a373;
-    color:white;
+background:#d6a05d;
+color:white;
+}
+
+.btn-primary:hover{
+transform:translateY(-3px);
 }
 
 .btn-secondary{
-    border:2px solid white;
-    color:white;
+border:2px solid white;
+color:white;
 }
+
+.btn-secondary:hover{
+background:white;
+color:black;
+}
+
+/* ABOUT */
 
 .about{
-    max-width:1100px;
-    margin:auto;
-    padding:80px 20px;
+padding:100px 10%;
+background:#f8f1e7;
 }
 
-.about h2{
-    margin-bottom:20px;
-    color:#3d2b1f;
+.section-title{
+text-align:center;
+font-size:45px;
+margin-bottom:20px;
+color:#402a1e;
 }
+
+.section-desc{
+max-width:900px;
+margin:auto;
+text-align:center;
+line-height:2;
+color:#666;
+font-size:18px;
+}
+
+/* MENU CARDS */
 
 .cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-    margin-top:40px;
+padding:80px 10%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
 }
 
 .card{
-    background:white;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
-    text-align:center;
+background:white;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,.1);
+transition:.4s;
 }
 
-.card a{
-    display:inline-block;
-    margin-top:15px;
-    text-decoration:none;
-    color:#8b5e34;
-    font-weight:bold;
+.card:hover{
+transform:translateY(-10px);
 }
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card-content{
+padding:25px;
+text-align:center;
+}
+
+.card-content h3{
+margin-bottom:10px;
+color:#3c2415;
+}
+
+.card-content p{
+color:#666;
+font-size:14px;
+margin-bottom:20px;
+}
+
+.card-content a{
+background:#8b5e34;
+color:white;
+padding:10px 25px;
+border-radius:30px;
+text-decoration:none;
+display:inline-block;
+}
+
+/* FOOTER */
+
+footer{
+background:#2d1f16;
+padding:40px;
+text-align:center;
+color:white;
+margin-top:50px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:55px;
+}
+
+nav ul{
+display:none;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
 <nav>
-    <div class="logo">TanSTEAK</div>
 
-    <div class="menu">
-        <a href="Menu.html">Tentang</a>
-        <a href="makanan.html">Makanan</a>
-        <a href="customer_review_updated.html">Review</a>
-        <a href="contact.html">Kontak</a>
-    </div>
+<div class="logo">
+TANSTEAK
+</div>
+
+<ul>
+<li><a href="Menu.html">Tentang</a></li>
+<li><a href="makanan.html">Menu</a></li>
+<li><a href="customer_review_updated.html">Review</a></li>
+<li><a href="contact.html">Kontak</a></li>
+</ul>
+
 </nav>
 
 <section class="hero">
-    <div class="hero-content">
-        <h1>TANSTEAK</h1>
-        <p>Good Steak, Good Mood!</p>
 
-        <a href="makanan.html" class="btn btn-primary">
-            Lihat Menu
-        </a>
+<div class="hero-content">
 
-        <a href="contact.html" class="btn btn-secondary">
-            Hubungi Kami
-        </a>
-    </div>
+<h1>
+TAN<span>STEAK</span>
+</h1>
+
+<p>
+Nikmati steak premium dengan cita rasa terbaik,
+konsep open kitchen modern, dan pengalaman makan
+yang berkesan.
+</p>
+
+<div class="buttons">
+
+<a href="makanan.html" class="btn btn-primary">
+Lihat Menu
+</a>
+
+<a href="contact.html" class="btn btn-secondary">
+Reservasi
+</a>
+
+</div>
+
+</div>
+
 </section>
 
 <section class="about">
-    <h2>Apa itu TanSTEAK?</h2>
 
-    <p>
-        TanSTEAK adalah restoran steak modern yang mengusung konsep
-        open kitchen sehingga pelanggan dapat melihat langsung
-        proses memasak secara transparan dan interaktif.
-    </p>
+<h2 class="section-title">
+Apa itu TanSTEAK?
+</h2>
 
-    <div class="cards">
+<p class="section-desc">
+TanSTEAK adalah restoran steak modern yang
+menggabungkan kualitas bahan premium,
+open kitchen experience, serta pelayanan profesional.
+Kami menghadirkan pengalaman kuliner yang transparan,
+hangat, dan berkelas untuk setiap pelanggan.
+</p>
 
-        <div class="card">
-            <h3>Menu Utama</h3>
-            <a href="Menu.html">Buka Halaman</a>
-        </div>
-
-        <div class="card">
-            <h3>Daftar Makanan</h3>
-            <a href="makanan.html">Buka Halaman</a>
-        </div>
-
-        <div class="card">
-            <h3>Customer Review</h3>
-            <a href="customer_review_updated.html">Buka Halaman</a>
-        </div>
-
-        <div class="card">
-            <h3>Contact</h3>
-            <a href="contact.html">Buka Halaman</a>
-        </div>
-
-    </div>
 </section>
+
+<section class="cards">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=900&q=80">
+
+<div class="card-content">
+
+<h3>Menu Utama</h3>
+
+<p>
+Lihat berbagai pilihan menu favorit TanSTEAK.
+</p>
+
+<a href="Menu.html">
+Buka
+</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1559847844-d721426d6edc?auto=format&fit=crop&w=900&q=80">
+
+<div class="card-content">
+
+<h3>Daftar Makanan</h3>
+
+<p>
+Temukan steak dan hidangan terbaik kami.
+</p>
+
+<a href="makanan.html">
+Buka
+</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80">
+
+<div class="card-content">
+
+<h3>Customer Review</h3>
+
+<p>
+Lihat pengalaman pelanggan kami.
+</p>
+
+<a href="customer_review_updated.html">
+Buka
+</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80">
+
+<div class="card-content">
+
+<h3>Contact</h3>
+
+<p>
+Hubungi kami untuk reservasi dan informasi.
+</p>
+
+<a href="contact.html">
+Buka
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 TanSTEAK Restaurant
+
+</footer>
 
 </body>
 </html>
+```
